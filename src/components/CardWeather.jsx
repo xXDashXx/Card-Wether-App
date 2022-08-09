@@ -8,7 +8,6 @@ const CardWeather = ({ lat, lon }) => {
   const [temperature, setTemperature] = useState()
   const [isCelcius, setisCelcius] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
-  const [mode, setMode] = useState(true)
 
   useEffect(() => {
     if (lat && lon) {
@@ -30,15 +29,6 @@ const CardWeather = ({ lat, lon }) => {
   }, [lat, lon])
 
   console.log(weather)
-
-  const screenMode = () => {
-    
-    if (mode === false) {
-      setMode('#FFFFFF')
-    }else{
-      setMode('#000000')
-    }
-  }
 
   const handleClick = () => {
     if (isCelcius === true) {
